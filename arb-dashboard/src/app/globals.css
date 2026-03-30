@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #e0e0e8;
+  --card-bg: #111118;
+  --card-border: #1a1a2e;
+  --neon-cyan: #00d9ff;
+  --neon-green: #00ff88;
+  --neon-red: #ff3366;
+  --neon-amber: #ffb800;
+  --neon-purple: #a855f7;
+  --dim: #64648a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-cyan: var(--neon-cyan);
+  --color-neon-green: var(--neon-green);
+  --color-neon-red: var(--neon-red);
+  --color-amber: var(--neon-amber);
+  --color-neon-purple: var(--neon-purple);
+  --color-dim: var(--dim);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--card-border) transparent;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+/* Glow effects */
+.glow-cyan {
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px rgba(0, 217, 255, 0.3);
+}
+.glow-green {
+  text-shadow: 0 0 10px var(--neon-green), 0 0 20px rgba(0, 255, 136, 0.3);
+}
+.glow-red {
+  text-shadow: 0 0 10px var(--neon-red), 0 0 20px rgba(255, 51, 102, 0.3);
+}
+
+.card-cyber {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}

@@ -1,0 +1,17 @@
+# ── Rust ──────────────────────────────────────────────────────────────────────
+polymarket-btc-arb-rust/target/
+polymarket-btc-arb-rust/.env
+
+# ── Next.js / Node ───────────────────────────────────────────────────────────
+arb-dashboard/node_modules/
+arb-dashboard/.next/
+arb-dashboard/out/
+arb-dashboard/build/
+arb-dashboard/.env*
+
+# ── OS / IDE ─────────────────────────────────────────────────────────────────
+.DS_Store
+*.pem
+*.swp
+.vscode/
+.idea/
